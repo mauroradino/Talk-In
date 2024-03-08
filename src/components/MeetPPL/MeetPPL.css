@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.MeetDiv{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.MeetTitle{
+    margin-top: 100px;
+    color: #3637FE;
+    width: 600px;
+    text-align: center;
+}
+.MeetSub{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 40px;
+    width: 40vw;
+    margin: 5% 5%;
+}
+.MeetTextDiv{
+    display: block;
+}
+@media (max-width: 767px){
+    .MeetDiv{
+        display: block;
+    }
+    .MeetTitle{
+        width: 90vw;
+        font-size: 25px;
+        text-align: center;
+        margin: 10px;
+    }
+    .MeetImg{
+        width: 60vw;
+        margin: 20vw 20vw;
+    }
+    .MeetSub{
+        font-size: 12px;
+        width: 90vw;
+        text-align: center;
+    }
+}

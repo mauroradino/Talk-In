@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.divChat{
+    display: flex;
+    background-color: #3637FE;
+    width: 90%;
+    justify-content: space-between;
+    height: 90vh;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.column{
+    width: 20%;
+    background-color: white;
+}
+.chat{
+    background-color: blue;
+    width: 80%;
+}
+.primeraFila{
+    display: flex;
+    width: 100%;
+    background-color: whitesmoke;
+    height: 15%;
+}
+.conversacion{
+    background-color: white;
+    background-image: url('../../assets/fondoConversacion.png');
+    background-size: 25px 25px;
+    background-repeat: repeat;
+    height: 90%;
+    width: 100%;
+}
+.escritura{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(210, 205, 205);
+    height: 10%;
+    width: 100%;
+    align-items: center;
+}
+.inputEscritura{
+    width: 60%;
+    border: none;
+    height: 70%;
+}
+.profileImage{
+    width: 50px;
+    align-self: center;
+    margin-left: 10px;
+}
+.conversacionChat{
+    display: flex;
+    height: 70px;
+    background-image: none;
+    padding-left: 10px;
+    align-items: end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.conversacionChat.active{
+    background-color: #3637FE;
+    color: white;
+}
+.chatNombre.active{
+    color: white;
+}
+.chatNombre{
+    font-size: 15px;
+    color: #3637FE;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.sendButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+.selectChat{
+    width: 100%;
+    border: none;
+}
