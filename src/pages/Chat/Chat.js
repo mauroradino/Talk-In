@@ -6,10 +6,44 @@ import chatProfileActive from '../../assets/profileChatActive.png'
 import { useState } from 'react'
 const Chat = () =>{
     const [selectedChat, setSelectedChat] = useState(0);
+    const [mensajeValue, setMensajeValue] = useState("");
+    const [conversacionValue] = useState([]);
 
     const handleChatClick = (chatId) => () => {
         setSelectedChat(chatId);
     };
+    
+    const changeMensaje = (e) => {
+        setMensajeValue(e.target.value)
+    }
+
+    const insertarSaltoDeLinea = (str) => {
+        let result = '';
+        for (let i = 0; i < str.length; i += 40) {
+            result += str.substring(i, i + 40) + '<br>';
+        }
+        return result;
+    };
+    
+    
+    const sendButtonClick = () => {
+        const msjInput = document.getElementById("msjInput");
+        const conversacion = document.getElementById("conversacion");
+        setMensajeValue("");
+        conversacionValue.push(mensajeValue);
+        msjInput.value = "";
+    
+        const mensajeDiv = document.createElement("div");
+        const msjConSaltos = insertarSaltoDeLinea(mensajeValue); 
+    
+        mensajeDiv.id = conversacionValue.length - 1;
+        mensajeDiv.className = "mensaje";
+        mensajeDiv.innerHTML = msjConSaltos;
+        conversacion.appendChild(mensajeDiv);
+    };
+    
+    
+
     return(
         <div className='divChat'>
             <div className='column'>
@@ -29,16 +63,16 @@ const Chat = () =>{
                 </div>
             </div>
             <div className='chat'>
-                <div className='conversacion'>
+                <div id='conversacion' className='conversacion'>
 
                 </div>
                 <div className='escritura'>
-                    <input className='inputEscritura' type='text'/>
-                    <button className='sendButton' onClick={() => console.log("click")}><img className='sendButtonImg' src={sendButton} width="40px" height="40px" alt='boton'/></button>
+                    <input id='msjInput' className='inputEscritura' onChange={changeMensaje} type='text'/>
+                    <button className='sendButton' onClick={sendButtonClick}><img className='sendButtonImg' src={sendButton} width="40px" height="40px" alt='boton'/></button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Chat
+export default Chat;

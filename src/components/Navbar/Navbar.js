@@ -17,7 +17,10 @@ const Navbar = () =>{
                  <Link class="nav-link" aria-current="page" to="/">INICIO</Link>
                 </li>
                 <li class="nav-item">
-                 <a class="nav-link navSobre" href="#sobreTalk">¿QUE ES TALK-IN?</a>
+                 <Link class="nav-link navSobre" to="/">¿QUE ES TALK-IN?</Link>
+                </li>
+                <li class="nav-item">
+                 <Link class="nav-link navSobre" to="/Chat">CHAT</Link>
                 </li>
               </ul>
       <form class="d-flex" role="search">

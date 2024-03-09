@@ -33,6 +33,8 @@
     background-repeat: repeat;
     height: 90%;
     width: 100%;
+    overflow-y: auto;
+    padding-top: 40px;
 }
 .escritura{
     display: flex;
@@ -83,4 +85,15 @@
 .selectChat{
     width: 100%;
     border: none;
+}
+.mensaje{
+    width: max-content;
+    height: max-content;
+    padding: 20px;
+    color: white;
+    background-color: #3637FE;
+    border-radius: 10px;
+    margin-left: 40px;
+    border-bottom-left-radius: 0;
+    margin-bottom: 20px;
 }
