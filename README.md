@@ -27,7 +27,7 @@ Para comenzar con Talk-In, simplemente registrate para obtener una cuenta y empe
 
 ## Retroalimentación
 
-Valoramos todo tipo de comentarios, si tienes sugerencias, comentarios o preguntas, no dudes en [contactarme](mauroradino2003@gmail.com). Tu aporte ayuda a mejorar Talk-In y crear una mejor experiencia para los usuarios.
+Valoramos todo tipo de comentarios, si tienes sugerencias, comentarios o preguntas, no dudes en [contactarme](mailto:mauroradino2003@gmail.com). Tu aporte ayuda a mejorar Talk-In y crear una mejor experiencia para los usuarios.
 
 ---
 **Talk-In**
