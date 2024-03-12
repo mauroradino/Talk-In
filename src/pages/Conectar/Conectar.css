@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Kanit&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.divConectar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.filtro{
+    display: flex;
+    align-items: center;
+    color: #3637FE;
+    font-family: "Noto Sans TC", sans-serif;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.resultados{
+    height: 100vh;
+    width: 60%;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.515);
+    margin-bottom: 100px;
+    overflow-y: auto;
+}
+.resultadoUsuario{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 40px;
+    align-items: center;
+}
+.resultadoUsuario:hover .nombreUsuario{
+    background-color: #3637FE;
+    color: white;
+}
+.resultadoUsuario:hover{
+    background-color: #3637FE;
+}
+.resultadoUsuario:hover .añadirBtn{
+    display: flex;
+}
+.nombreUsuario{
+    margin-left: 20px;
+    color: #3637FE;
+    font-family: "Noto Sans TC", sans-serif;
+    margin-bottom: 0;
+}
+.bandera{
+    margin-left: 20px;
+}
+.añadirBtn{
+    display: none;
+    background-color: white;
+    color: #3637FE;
+    font-family: "Noto Sans TC", sans-serif;
+    padding: 10px;
+    border: none;
+    margin-left: 40px;
+    border-radius: 10px;
+}

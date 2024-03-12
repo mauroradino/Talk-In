@@ -26,23 +26,44 @@ const Chat = () =>{
     };
     
     
-    const sendButtonClick = () => {
+    const sendButtonClick = async() => { 
         const msjInput = document.getElementById("msjInput");
         const conversacion = document.getElementById("conversacion");
         setMensajeValue("");
         conversacionValue.push(mensajeValue);
         msjInput.value = "";
-    
+        
         const mensajeDiv = document.createElement("div");
+        const respuestaDiv = document.createElement("div");
         const msjConSaltos = insertarSaltoDeLinea(mensajeValue); 
-    
+        
+
+        const respuestaContainer = document.createElement("div");
+        respuestaContainer.className = "respuestaContainer";
+        
+
+
         mensajeDiv.id = conversacionValue.length - 1;
         mensajeDiv.className = "mensaje";
         mensajeDiv.innerHTML = msjConSaltos;
         conversacion.appendChild(mensajeDiv);
+
+        respuestaDiv.id = "respuesta" + conversacionValue.length - 1;
+        respuestaDiv.className = "respuesta";
+        respuestaDiv.innerHTML = "Mensaje de respuesta automatico";
+        conversacion.appendChild(respuestaContainer)
+        respuestaContainer.appendChild(respuestaDiv);
+
+
+
+
     };
     
-    
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
+            sendButtonClick(event);
+        }
+    }
 
     return(
         <div className='divChat'>
@@ -55,7 +76,7 @@ const Chat = () =>{
                         <button key={chatId} className='selectChat' onClick={handleChatClick(chatId)}>
                             <div id={chatId} className={`conversacionChat ${selectedChat === chatId ? 'active' : ''}`}>
                                 <img className='chatProfile' src={selectedChat === chatId ? chatProfileActive : chatProfile} alt="Chat" width="50px" />
-                                <p className={`chatNombre ${selectedChat === chatId ? 'active' : ''}`}>User Talk</p>
+                                <p className={`chatNombre ${selectedChat === chatId ? 'active' : ''}`}>Contacto</p>
                             </div>
                         </button>
                     ))}
@@ -63,11 +84,9 @@ const Chat = () =>{
                 </div>
             </div>
             <div className='chat'>
-                <div id='conversacion' className='conversacion'>
-
-                </div>
+                <div id='conversacion' className='conversacion'></div>
                 <div className='escritura'>
-                    <input id='msjInput' className='inputEscritura' onChange={changeMensaje} type='text'/>
+                    <input id='msjInput' className='inputEscritura' onKeyDown={handleKeyPress} onChange={changeMensaje} type='text'/>
                     <button className='sendButton' onClick={sendButtonClick}><img className='sendButtonImg' src={sendButton} width="40px" height="40px" alt='boton'/></button>
                 </div>
             </div>

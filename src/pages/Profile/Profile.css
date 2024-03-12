@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.infoPerfilTitle{
+    text-align: center;
+    color: #3637FE;
+    font-family: "Noto Sans TC", sans-serif;
+    margin-top: 40px;
+}
+.infoDiv{
+    width: 60%;
+    height: max-content;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 0 auto;
+}
+.textoInfo{
+    color: #3637FE;
+    font-family: "Noto Sans TC", sans-serif;
+}
+.divContenidoInfo{
+    margin-top: 40px;
+}
+main {
+    background-color: rgba(227, 227, 227, 0.822);
+    padding: 72px;
+}
