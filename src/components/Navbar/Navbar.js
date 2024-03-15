@@ -7,7 +7,11 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import Context from '../../context';
 const Navbar = () =>{
-  const { logged } = useContext(Context);
+  const { logged, url } = useContext(Context);
+
+  const fotoPerfil = url
+
+
     return(
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -20,9 +24,9 @@ const Navbar = () =>{
                 <li class="nav-item">
                  <Link class="nav-link" aria-current="page" to="/">INICIO</Link>
                 </li>
-                <li class="nav-item">
-                 <Link class="nav-link navSobre" to="/">¿QUE ES TALK-IN?</Link>
-                </li>
+                {
+                logged === false ? <li class="nav-item"><Link class="nav-link navSobre" to="/">¿QUE ES TALK-IN?</Link></li> : null
+                }
                 {
                  logged === true ?<li class="nav-item"> <Link class="nav-link navSobre" to="/Chat">CHAT</Link> </li> : null 
                 }

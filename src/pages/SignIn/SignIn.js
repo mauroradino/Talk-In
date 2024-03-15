@@ -34,6 +34,11 @@ const SignIn = () =>{
         navigate("/"); // Navegar después de actualizar el estado
       })
       .catch((error) => {
+        Swal.fire({
+          title: "Error",
+          text: error.message,
+          icon: "error"
+      });
         console.log(error.code, error.message);
       });
   };

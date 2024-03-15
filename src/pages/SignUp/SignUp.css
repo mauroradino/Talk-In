@@ -2,9 +2,9 @@
     padding: 0;
     margin: 0;
 }
-main{
+.mainRegistro{
     background-color: rgba(227, 227, 227, 0.822);
-    height: 100vh;
+    height: 100%;
     padding-top: 60px;
 }
 .UpDiv{

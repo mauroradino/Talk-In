@@ -19,6 +19,8 @@ const SignUp = () => {
     const [apellido, setApellido] = useState("")
     const [nacionalidad, setNacionalidad] = useState("")
     const [idiomas, setIdiomas] = useState([])
+    const [setImagen] = useState(null);
+
     const contraseñaChange = (e) =>{
         setContraseña(e.target.value)
     }
@@ -40,6 +42,11 @@ const SignUp = () => {
         seleccionIdiomas = idiomas.length === 0 ? "Selecciona al menos una opción" : idiomas.join(', ')
         console.log(arrayIdiomas)
       };
+
+      const handleImagenChange = (event) => {
+        const file = event.target.files[0];
+        setImagen(file);
+    };  
     
     const onSubmit = async (event) => {
         setLoggedApellido(apellido)
@@ -48,18 +55,19 @@ const SignUp = () => {
         setLoggedNacionalidad(nacionalidad)
         setLoggedIdiomas(idiomas)
         event.preventDefault();
+
+
         if (correo && contraseña && nombre && apellido && nacionalidad && idiomas) {
             try {
                 const userCredential = await createUserWithEmailAndPassword(auth, correo, contraseña);
                 const user = userCredential.user;
-                console.log(user);
-
                 await addDoc(collection(db, 'Usuarios'), {
                     nombre: nombre,
                     apellido: apellido,
                     correo: correo,
                     nacionalidad: nacionalidad,
                     idiomas: idiomas,
+                    fotoURL: "",
                     conversaciones: {
                         conversacion1: [],
                         conversacion2: [],
@@ -90,10 +98,8 @@ const SignUp = () => {
         }
     }
     
-
-
     return(
-        <main>
+        <main className="mainRegistro">
             <div className="UpDiv">
             <form className="form" id="form">
                 <h2 className="registroTitle">Registro</h2>
@@ -113,7 +119,7 @@ const SignUp = () => {
                 <option value="Italiano">Italiano</option>
                 <option value="Sueco">Sueco</option>
                 </select>
-                <input className="inputImg" type="file" id="imagen" name="imagen" />
+                <input className="inputImg" type="file" onChange={handleImagenChange} id="imagen" name="imagen" />
                 <button className="registroBtn" onClick={onSubmit} type="submit">Enviar</button>
             </form>
             </div>
