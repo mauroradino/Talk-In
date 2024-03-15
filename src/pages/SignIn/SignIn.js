@@ -1,36 +1,42 @@
 import { useState, useContext } from 'react'
 import './SignIn.css'
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logoIS.png'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../firebase'
 import Context from '../../context'
-
+import Swal from "sweetalert2"
 const SignIn = () =>{
-     const { setLogged, setLoggedEmail } = useContext(Context);
-     const [contraseña, setContraseña] = useState("")
-     const [correo, setCorreo] = useState("")
+  const navigate = useNavigate();
+  const { setLogged, setLoggedEmail, setLoggedId} = useContext(Context);
+  const [contraseña, setContraseña] = useState("")
+  const [correo, setCorreo] = useState("")
 
 
-     const contraseñaChange = (e) =>{
+  const contraseñaChange = (e) =>{
       setContraseña(e.target.value)
   }
   const correoChange = (e) =>{
       setCorreo(e.target.value)
   }
 
-  const onSubmit = (event) =>{
+  const onSubmit = (event) => {
+    event.preventDefault(); // Es buena práctica llamar esto al principio para evitar efectos secundarios inesperados.
     signInWithEmailAndPassword(auth, correo, contraseña)
-   .then((userCredential) =>{
-   const user = userCredential.user;
-   console.log(user)
-   setLogged(true)
-   setLoggedEmail(correo)
-   
-   }).catch((error)=>{
-   console.log(error.code, error.message)
-   })
-   event.preventDefault()
-   } 
+      .then((userCredential) => {
+        setLogged(true);
+        setLoggedEmail(correo);
+        Swal.fire({
+          title: "Sesión Iniciada",
+          text: "Bienvenido/a",
+          icon: "success",
+        });
+        navigate("/"); // Navegar después de actualizar el estado
+      })
+      .catch((error) => {
+        console.log(error.code, error.message);
+      });
+  };
   
 
     return(

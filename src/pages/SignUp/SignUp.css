@@ -16,6 +16,7 @@ main{
     border-radius: 20px;
     color: #3637FE;
 }
+
 .form{
    width: 100%;
    display: flex;
@@ -41,6 +42,9 @@ input{
     border: 1px grey solid;
     height: 50px;
     padding: 10px;
+}
+select{
+    margin: 10px;
 }
 .inputImg{
     border: none;

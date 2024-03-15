@@ -13,7 +13,7 @@ const Profile = () =>{
            <p className='textoInfo'><b>Nombre:</b> {loggedNombre}</p>
            <p className='textoInfo'><b>Apellido:</b> {loggedApellido}</p>
            <p className='textoInfo'><b>Nacionalidad:</b> {loggedNacionalidad}</p>
-           <p className='textoInfo'><b>Idiomas:</b> {loggedIdiomas}</p>
+           <p className='textoInfo'><b>Idiomas:</b> {Array.isArray(loggedIdiomas) ? loggedIdiomas.join(", ") : null}</p>  
           </div> 
        </div>
      </main>
