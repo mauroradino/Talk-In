@@ -5,15 +5,15 @@ import MeetPPL from '../../components/MeetPPL/MeetPPL.js';
 import Promo from '../../components/Promo/Promo.js';
 import SobreTalk from '../../components/SobreTalk/SobreTalk.js';
 import Footer from '../../components/Footer/Footer.js';
-const HomePage = () =>{
-    return(
+const HomePage = () => {
+    return (
         <>
-        <WelcomeComp />
-        <AvailableLang/>
-        <MeetPPL />
-        <Promo />
-        <SobreTalk />
-        <Footer />
+            <WelcomeComp />
+            <AvailableLang />
+            <MeetPPL />
+            <Promo />
+            <SobreTalk />
+            <Footer />
         </>
     )
 }

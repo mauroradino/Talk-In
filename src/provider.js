@@ -10,7 +10,7 @@ const Provider = ({ children }) => {
     const [loggedEmail, setLoggedEmail] = useState("")
     const [loggedImagen, setLoggedImagen] = useState("")
     const [loggedId, setLoggedId] = useState("")
-    const logeado = {loggedId, setLoggedId, loggedImagen, setLoggedImagen, logged, setLogged, loggedEmail, setLoggedEmail, loggedNombre, setLoggedNombre, loggedApellido, setLoggedApellido, loggedNacionalidad, setLoggedNacionalidad, loggedIdiomas, setLoggedIdiomas}
+    const logeado = { loggedId, setLoggedId, loggedImagen, setLoggedImagen, logged, setLogged, loggedEmail, setLoggedEmail, loggedNombre, setLoggedNombre, loggedApellido, setLoggedApellido, loggedNacionalidad, setLoggedNacionalidad, loggedIdiomas, setLoggedIdiomas }
 
     return (
         <Context.Provider value={logeado}>

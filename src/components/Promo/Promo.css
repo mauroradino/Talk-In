@@ -5,13 +5,24 @@
 .PromoDiv{
     display: flex;
     margin-top: 200px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
+    align-items: center;
 }
 .PromoTitle{
     color: #3637FE;
     text-align: center;
     align-self: center;
+}
+.PromoSub{
+    text-align: center;
+    font-size: 15px;
+    width: 40vw;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.MeetTextDiv{
+    display: block;
 }
 
 @media (max-width: 767px){

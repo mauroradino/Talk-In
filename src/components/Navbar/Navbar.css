@@ -61,3 +61,8 @@
 .logo{
     margin: 10px;
 }
+.buttonLogout{
+    border: none;
+    background-color: transparent;
+    margin-right: 50px;
+}

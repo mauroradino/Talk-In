@@ -7,20 +7,20 @@ import SignIn from "./pages/SignIn/SignIn"
 import Profile from "./pages/Profile/Profile"
 import Conectar from "./pages/Conectar/Conectar"
 import Provider from "./provider"
-function App(){
-  return(
+function App() {
+  return (
     <Provider>
-    <Router>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/Registro" element={<SignUp/>} />
-        <Route path="/InicioSesion" element={<SignIn/>} />
-        <Route path="/Chat" element={<Chat/>} />
-        <Route path="/Perfil" element={<Profile/>} />
-        <Route path="/Conectar" element={<Conectar/>} />
-      </Routes>
-    </Router>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Registro" element={<SignUp />} />
+          <Route path="/InicioSesion" element={<SignIn />} />
+          <Route path="/Chat" element={<Chat />} />
+          <Route path="/Perfil" element={<Profile />} />
+          <Route path="/Conectar" element={<Conectar />} />
+        </Routes>
+      </Router>
     </Provider>
   )
 }

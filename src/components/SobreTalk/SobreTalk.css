@@ -8,7 +8,7 @@
     align-items: baseline;
     width: 100%;
     margin-top: 200px;
-
+    margin-bottom: 300px;
 }
 .SobreTitle{
     color: #3637FE;
@@ -18,7 +18,6 @@
     color: rgb(36, 35, 35);
     margin-top: 20px;
     text-align: center;
-    margin-bottom: 200px;
     width: 40%;
 }
 @media (max-width: 767px){

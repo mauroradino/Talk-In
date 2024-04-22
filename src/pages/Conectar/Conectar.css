@@ -8,14 +8,6 @@
     display: flex;
     justify-content: space-evenly;
 }
-.filtro{
-    display: flex;
-    align-items: center;
-    color: #3637FE;
-    font-family: "Noto Sans TC", sans-serif;
-    margin-left: 20px;
-    font-weight: bold;
-}
 .resultados{
     height: 100vh;
     width: 60%;
@@ -60,4 +52,12 @@
     border: none;
     margin-left: 40px;
     border-radius: 10px;
+}
+.filtro{
+    display: flex;
+    align-items: center;
+    color: #3637FE;
+    font-family: "Noto Sans TC", sans-serif;
+    margin-left: 20px;
+    font-weight: bold;
 }

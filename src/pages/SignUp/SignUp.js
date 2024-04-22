@@ -40,7 +40,6 @@ const SignUp = () => {
         arrayIdiomas.push(e.target.value)
         setIdiomas(arrayIdiomas)
         seleccionIdiomas = idiomas.length === 0 ? "Selecciona al menos una opción" : idiomas.join(', ')
-        console.log(arrayIdiomas)
       };
 
       const handleImagenChange = (event) => {
