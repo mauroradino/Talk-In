@@ -7,10 +7,9 @@
   display: grid;
   grid-template-columns: 80%;
   gap: 20px;
-  width: 100%;
+  width: 80%;
+  margin: 300px 10% 300px 10%;
   justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 200px;
 }
 
 summary {
