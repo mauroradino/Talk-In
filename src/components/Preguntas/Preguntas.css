@@ -5,20 +5,27 @@
 }
 .divPreguntas {
   display: grid;
-  grid-template-columns: 40% 40%;
-  grid-template-rows: 200px 200px;
+  grid-template-columns: 80%;
   gap: 20px;
   width: 80%;
   margin: 300px 10% 300px 10%;
   justify-content: center;
 }
+
 summary {
   color: #3637fe;
-  width: 100%;
+  font-size: 1.2em;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
 }
+
+.texto {
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
 @media (max-width: 800px) {
   details {
     margin-top: 150px;
