@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap&family=Kanit&family=Noto+Sans+TC:wght@100..900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Kanit&family=Noto+Sans+TC:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
 }
-footer{
-    background-color: #3637FE;
-    padding: 20px;
-    width: 100%;
+footer {
+  background-color: #3637fe;
+  padding: 20px;
+  width: 100%;
+  align-items: center;
 }
 .col-md-4,
-.nav-link{
-    color: white;
-    font-family: "Noto Sans TC", sans-serif;
+.nav-link {
+  color: white;
+  font-family: "Noto Sans TC", sans-serif;
+}
+.nav-item {
+  font-size: 12px;
+}
+.bi {
+  align-self: center;
 }

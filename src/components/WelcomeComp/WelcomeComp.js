@@ -5,7 +5,7 @@ const WelcomeComp = () => {
     return (
         <div className='homeDiv'>
             <h1 className="title">Practicá tu idioma favorito con nativos!</h1>
-            <img className='homeImg' src={homeImg} width="400px" alt='bienvenida' />
+            <img className='homeImg' src={homeImg} alt='bienvenida' />
         </div>
     )
 }

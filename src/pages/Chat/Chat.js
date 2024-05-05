@@ -9,7 +9,6 @@ import { db } from '../../firebase'
 import { getDocs, where, query, collection, updateDoc, doc, getDoc } from 'firebase/firestore'
 
 const Chat = () => {
-    let arrayMensajes = []
     const { loggedEmail } = useContext(Context)
     const [selectedChat, setSelectedChat] = useState(1);
     const [mensajeValue, setMensajeValue] = useState("");
@@ -85,7 +84,6 @@ const Chat = () => {
         mensajeDiv.className = "mensaje";
         mensajeDiv.innerHTML = msjConSaltos;
         conversacion.appendChild(mensajeDiv);
-        arrayMensajes.push(mensajeValue)
 
         const usuariosRef = collection(db, "Usuarios");
         const q = query(usuariosRef, where("correo", "==", loggedEmail));
@@ -100,7 +98,7 @@ const Chat = () => {
                 if (usuarioDoc.exists()) {
                     const conversacionDB = data.conversaciones;
                     const conversacionActual = conversacionDB[`conversacion${selectedChat}`] || [];
-                    conversacionActual.push(mensajeValue);
+                    conversacionActual.push([[loggedEmail], [mensajeValue]]);
                     await updateDoc(usuarioRef, {
                         [`conversaciones.conversacion${selectedChat}`]: conversacionActual
                     });

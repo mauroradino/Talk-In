@@ -1,45 +1,47 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.MeetDiv{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+.MeetDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 80%;
 }
-.MeetTitle{
-    margin-top: 100px;
-    color: #3637FE;
-    width: 600px;
-    text-align: center;
+.MeetTitle {
+  margin-top: 100px;
+  color: #3637fe;
+  text-align: center;
 }
-.MeetSub{
-    text-align: center;
-    font-size: 15px;
-    margin-top: 40px;
-    width: 40vw;
-    margin: 5% 5%;
+.MeetSub {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 40px;
+  width: 40vw;
+  margin: 5% 5%;
 }
-.MeetTextDiv{
+.MeetTextDiv {
+  display: block;
+  width: 60%;
+}
+@media (max-width: 767px) {
+  .MeetDiv {
     display: block;
-}
-@media (max-width: 767px){
-    .MeetDiv{
-        display: block;
-    }
-    .MeetTitle{
-        width: 90vw;
-        font-size: 25px;
-        text-align: center;
-        margin: 10px;
-    }
-    .MeetImg{
-        width: 60vw;
-        margin: 20vw 20vw;
-    }
-    .MeetSub{
-        font-size: 12px;
-        width: 90vw;
-        text-align: center;
-    }
+    width: 90%;
+  }
+  .MeetTitle {
+    width: 90vw;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+  }
+  .MeetImg {
+    width: 40%;
+    margin: 30px 30% 0 30%;
+  }
+  .MeetSub {
+    font-size: 12px;
+    width: 90vw;
+    text-align: center;
+  }
 }
