@@ -1,68 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap&family=Kanit&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Kanit&family=Noto+Sans+TC:wght@100..900&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.navbar-collapse{
-    margin-left: 40px;
+.navbar-collapse {
+  margin-left: 40px;
 }
-.container-fluid .navbar-brand{
-    font-size: 22px;
-    font-weight: bold;
-    color: #3637FE;
-    font-family: "Noto Sans TC", sans-serif;
+.container-fluid .navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: #3637fe;
+  font-family: "Noto Sans TC", sans-serif;
 }
-.container-fluid .navbar-brand:hover{
-    color: #3637FE;
-    font-family: "Noto Sans TC", sans-serif;
+.container-fluid .navbar-brand:hover {
+  color: #3637fe;
+  font-family: "Noto Sans TC", sans-serif;
 }
-.navbar-nav .nav-link:hover{
-    color: #3637FE;
-    text-decoration: underline;
+.navbar-nav .nav-link:hover {
+  color: #3637fe;
+  text-decoration: underline;
 }
-.navbar-nav .nav-link:focus{
-    color: #3637FE;
+.navbar-nav .nav-link:focus {
+  color: #3637fe;
 }
-.container-fluid a{
-    color: #3637FE;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 15px;
-    font-weight: bold;
+.container-fluid a {
+  color: #3637fe;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
-.d-flex .btn-outline-success{
-    background-color: #3637FE;
-    border: 1px #3637FE solid;
-    color: white;
-    border-radius: 8px;
-    padding: 10px;
-    margin-left: 10px;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+.d-flex .btn-outline-success {
+  background-color: #3637fe;
+  border: 1px #3637fe solid;
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-left: 10px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
-.d-flex .btn-outline-success:hover{
-    background-color: #2929b0;
+.d-flex .btn-outline-success:hover {
+  background-color: #2929b0;
 }
-.d-flex .btn-outline-success2{
-    background-color: white;
-    border: 1px #3637FE solid;
-    color: #3637FE;
-    border-radius: 8px;
-    text-decoration: none;
-    padding: 10px;
-    margin-left: 10px;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 15px;
+.d-flex .btn-outline-success2 {
+  background-color: white;
+  border: 1px #3637fe solid;
+  color: #3637fe;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 10px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 15px;
 }
-.d-flex .btn-outline-success2:hover{
-    background-color: #e9e9e9;
+.d-flex .btn-outline-success2:hover {
+  background-color: #e9e9e9;
 }
-.logo{
-    margin: 10px;
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1 1 auto;
+  padding: var(--bs-modal-padding);
+  justify-content: center;
 }
-.buttonLogout{
-    border: none;
-    background-color: transparent;
-    margin-right: 50px;
+.logoPopUpInicio {
+  margin: 0 auto;
+}
+.logo {
+  margin: 10px;
+}
+.buttonLogout {
+  border: none;
+  background-color: transparent;
+  margin-right: 50px;
+}
+.form-floating {
+  margin-top: 10px;
+}
+.inputReg {
+  margin-top: 10px;
+}
+.selectIdiomas {
+  margin-top: 20px;
+  border: 1px solid rgb(177, 174, 174);
+  padding: 10px;
+}
+optgroup {
+  font-weight: 500;
 }

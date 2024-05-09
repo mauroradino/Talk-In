@@ -152,11 +152,13 @@ const Navbar = () => {
 
   return (
     <>
+      {/* MODAL DE INICIO DE SESIÓN */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title className="iniciaSesionTitle">Iniciar Sesión</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <img className='logoPopUpInicio' width="60px" src={LogoTI} alt='logo' />
           <div className="form-floating">
             <input type="email" className="form-control" id="floatingInput correo" onChange={correoChange} value={correo} name="correo" placeholder="name@example.com" />
             <label for="floatingInput">Correo Electronico</label>
@@ -167,35 +169,33 @@ const Navbar = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cerrar
-          </Button>
-          <Button variant="primary" type='submit' onClick={onSubmit}>
-            Iniciar Sesión
-          </Button>
+          <Button variant="secondary" onClick={handleClose}>Cerrar</Button>
+          <Button variant="primary" type='submit' onClick={onSubmit}>Iniciar Sesión</Button>
         </Modal.Footer>
       </Modal>
-
+      {/* MODAL DE INICIO DE SESIÓN */}
+      {/* MODAL DE REGISTRO */}
       <Modal show={show2} onHide={handleClose2}>
         <Modal.Header closeButton>
           <Modal.Title>Registrate</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <input placeholder="Nombre" type="text" id="nombre" onChange={nombreChange} name="nombre" />
-          <input placeholder="Apellido" type="text" id="apellido" onChange={apellidoChange} name="apellido" />
-          <input placeholder="Nacionalidad" type="text" id="nacionalidad" onChange={nacionalidadChange} name="nacionalidad" />
-          <input placeholder="Correo Electronico" type="text" id="correo" onChange={correoChange} value={correo} name="correo" />
-          <input placeholder="Contraseña" type="text" id="contraseña" onChange={contraseñaChange} value={contraseña} name="contraseña" />
-          <select value={idiomas} onChange={idiomasChange} multiple>
-            <option value="">Selecciona un idioma</option>
-            <option value="Español">Español</option>
-            <option value="Ingles">Inglés</option>
-            <option value="Aleman">Alemán</option>
-            <option value="Frances">Francés</option>
-            <option value="Ruso">Ruso</option>
-            <option value="Chino">Chino</option>
-            <option value="Italiano">Italiano</option>
-            <option value="Sueco">Sueco</option>
+          <input className='form-control inputReg' placeholder="Nombre" type="text" id="nombre" onChange={nombreChange} name="nombre" />
+          <input className='form-control inputReg' placeholder="Apellido" type="text" id="apellido" onChange={apellidoChange} name="apellido" />
+          <input className='form-control inputReg' placeholder="Nacionalidad" type="text" id="nacionalidad" onChange={nacionalidadChange} name="nacionalidad" />
+          <input className='form-control inputReg' placeholder="Correo Electronico" type="text" id="correo" onChange={correoChange} value={correo} name="correo" />
+          <input className='form-control inputReg' placeholder="Contraseña" type="text" id="contraseña" onChange={contraseñaChange} value={contraseña} name="contraseña" />
+          <select className='selectIdiomas' value={idiomas} onChange={idiomasChange} multiple>
+            <optgroup label="Selecciona una opción">
+              <option value="Español">Español</option>
+              <option value="Ingles">Inglés</option>
+              <option value="Aleman">Alemán</option>
+              <option value="Frances">Francés</option>
+              <option value="Ruso">Ruso</option>
+              <option value="Chino">Chino</option>
+              <option value="Italiano">Italiano</option>
+              <option value="Sueco">Sueco</option>
+            </optgroup>
           </select>
         </Modal.Body>
         <Modal.Footer>
@@ -203,7 +203,7 @@ const Navbar = () => {
           <Button variant="primary" onClick={onSubmit2}>Registrarse</Button>
         </Modal.Footer>
       </Modal>
-
+      {/* MODAL DE REGISTRO */}
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <img className='logo' src={LogoTI} width="80px" alt='logo' />
@@ -232,7 +232,6 @@ const Navbar = () => {
                   <Button className='btn btn-outline-success2' variant="primary" onClick={handleShow2}>Registrate</Button>
                 </>
               ) : <><button className='buttonLogout'><img src={logout} onClick={logoutCuenta} width="30px" alt='logout logo' /></button><Link to="/Perfil"><img alt='imagen de perfil' src={profileImg} width="50px" /></Link></>}
-
             </form>
           </div>
         </div>
